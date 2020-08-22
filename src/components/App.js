@@ -1,10 +1,11 @@
 import React from 'react'
 
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 
-import Page4 from './Page4'
 import Welcome from '../pages/Welcome'
+import Account from '../pages/Account'
+
 
 
 
@@ -18,9 +19,7 @@ const App = () => {
 
             <Switch>
                 <Route exact path="/" component={Welcome} />
-                {/* <Route exact path="/page1" component={Page1} />
-                    <Route exact path="/page2" component={Page2} />
-                    <Route exact path="/page4" component={Page4} /> */}
+                <Route path="/:username" component={Account}/>
             </Switch>
 
         </BrowserRouter>
